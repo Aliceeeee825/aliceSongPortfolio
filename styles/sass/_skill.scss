@@ -13,14 +13,12 @@
 
 .skillContent{
     width: 25%;
+    min-width: 121px;
     height: 25%;
     transition: all 0.5s;
     i{
         font-size: 4rem;
         margin: auto auto;
-    }
-    img{
-        width: 23.5%;
     }
 }
 
@@ -76,4 +74,44 @@
 .creativityInner h2{
     font-weight: 700;
     text-transform: uppercase;
+}
+
+@media (max-width: 855px){
+    .columnSection{
+        width: 90%;
+        margin: 5% auto;
+    }
+}
+
+@media (max-width: 645px){
+    .columnSection{
+        width: 80%;
+    }
+    .creativity{
+        height: 60vh;
+        margin-bottom: 20%;
+    }
+}
+
+@media(max-width: 450px){
+    .creativityInner h2{
+        font-size: 50px;
+    }
+    .skillContent h5{
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 400px){
+    .creativityInner h2{
+        font-size: 45px;
+        line-height: 70px;
+    }
+}
+
+@media(max-width: 380px){
+    .creativityInner h2{
+        font-size: 35px;
+        line-height: 50px;
+    }
 }

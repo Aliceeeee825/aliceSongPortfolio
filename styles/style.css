@@ -255,6 +255,7 @@ body {
   position: relative;
   background: #ffffff;
   height: 100%;
+  min-width: 310px;
 }
 
 .wrapper {
@@ -475,6 +476,18 @@ img {
 
 .separator span:after {
   right: -35px;
+}
+
+@media (max-width: 720px) {
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 680px) {
+  h2 {
+    font-size: 50px;
+  }
 }
 
 .pace {
@@ -1078,9 +1091,6 @@ nav#main-nav [data-bigletter]:before {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
-  .splitSection h2 {
-    font-size: 60px;
-  }
   .splitLeft {
     width: 40%;
   }
@@ -1089,15 +1099,15 @@ nav#main-nav [data-bigletter]:before {
   }
 }
 
-@media (max-width: 680px) {
-  .splitRight h2 {
-    font-size: 50px;
-  }
-}
-
 @media (max-width: 420px) {
   #about {
     margin-bottom: 250px;
+  }
+}
+
+@media (max-width: 350px) {
+  .splitRight {
+    margin-right: 10%;
   }
 }
 
@@ -1121,6 +1131,7 @@ nav#main-nav [data-bigletter]:before {
 
 .skillContent {
   width: 25%;
+  min-width: 121px;
   height: 25%;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -1129,10 +1140,6 @@ nav#main-nav [data-bigletter]:before {
 .skillContent i {
   font-size: 4rem;
   margin: auto auto;
-}
-
-.skillContent img {
-  width: 23.5%;
 }
 
 .skillName {
@@ -1193,6 +1200,46 @@ nav#main-nav [data-bigletter]:before {
 .creativityInner h2 {
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media (max-width: 855px) {
+  .columnSection {
+    width: 90%;
+    margin: 5% auto;
+  }
+}
+
+@media (max-width: 645px) {
+  .columnSection {
+    width: 80%;
+  }
+  .creativity {
+    height: 60vh;
+    margin-bottom: 20%;
+  }
+}
+
+@media (max-width: 450px) {
+  .creativityInner h2 {
+    font-size: 50px;
+  }
+  .skillContent h5 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .creativityInner h2 {
+    font-size: 45px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 380px) {
+  .creativityInner h2 {
+    font-size: 35px;
+    line-height: 50px;
+  }
 }
 
 .filter {

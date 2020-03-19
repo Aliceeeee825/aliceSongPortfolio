@@ -73,9 +73,6 @@
     .splitSection{
         flex-direction: column-reverse;
     }
-    .splitSection h2{
-        font-size: 60px;
-    }
     .splitLeft{
         width: 40%;
     }
@@ -84,14 +81,14 @@
     }
 }
 
-@media (max-width: 680px){
-    .splitRight h2{
-        font-size: 50px;
-    }
-}
-
 @media (max-width: 420px){
     #about{
         margin-bottom: 250px;
+    }
+}
+
+@media(max-width: 350px){
+    .splitRight{
+        margin-right: 10%;
     }
 }
