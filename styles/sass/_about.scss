@@ -1,0 +1,26 @@
+#about{
+    margin-top: 70%;
+    height: 90vh
+}
+
+.splitSection{
+    // height: calc(100vh - 17%);
+    // position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: 5%;
+}
+
+.splitLeft {
+    width: 40%;
+    img{
+        border-radius: 20px;
+    }
+}
+	
+.splitRight {
+    margin-left: 5%;
+	}
+    

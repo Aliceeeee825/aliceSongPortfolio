@@ -1,0 +1,188 @@
+::-webkit-input-placeholder { color: #0d0d0d; }
+:-moz-placeholder { color: #0d0d0d; }
+::-moz-placeholder { color: #0d0d0d; }
+:-ms-input-placeholder { color: #0d0d0d; }
+
+#contact{
+	text-align: center;
+}
+
+input[type=text], input[type=password], input[type=email], textarea {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-weight: 300;
+	font-size: 15px;
+	background: transparent;
+	border: none;
+	border-bottom: 1px solid #d9d9d9;
+	line-height: 30px;
+	height: 30px;
+	color:#0d0d0d;
+	padding: 6px 0px;
+	transition: all 200ms linear;
+	border-radius: 0px;
+	-moz-border-radius:0x; 
+	-khtml-border-radius:0px; 
+	-webkit-border-radius:0px;
+	}
+	.text-light input[type=text], .text-light input[type=password], .text-light input[type=email], .text-light textarea { border-color: #666666; color: #ffffff; }
+		
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus, textarea:focus { border-color: #0d0d0d; }
+.text-light input[type=text]:focus, .text-light input[type=password]:focus, .text-light input[type=email]:focus, .text-light textarea:focus { border-color: #ffffff; }
+
+input.false[type=text], input.false[type=password]:focus, input.false[type=email], textarea.false { 
+	border-color: #fa4d5a;
+}
+
+input[type=text], input[type=password], input[type=email] { width: 100%; max-width: 100%; }		/* padding issue (240 + 2*5 = 250) */
+textarea { width: 100%; min-height: 100px; max-width: 100%; line-height: 26px; }		/* padding issue (395 + 2*5 = 405) */
+
+.one-half input[type=text], .one-half input[type=password], .one-half input[type=email] { width: 520px; }
+.one-half textarea { width: 520px; }
+
+input[type=submit] {
+	background: none;
+	cursor: pointer;
+	border-radius: 0px;
+	-moz-border-radius:0x; 
+	-khtml-border-radius:0px; 
+	-webkit-border-radius:0px;
+	display: inline-block;
+	font-family: 'Lato';
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 20px !important;
+	letter-spacing: 0.2em; 
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 5px;
+	-webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    transition: all 300ms ease;
+	color: #0d0d0d;
+	border: 1px solid rgba(0,0,0,.2);
+	padding: 10px 30px;
+	position: relative;
+	}
+	.text-light input[type=submit] { border: 1px solid rgba(255,255,255,.4); color: #ffffff; }
+
+input[type=submit]:hover { background: #0d0d0d; color: #ffffff; border-color: #0d0d0d; }
+.text-light input[type=submit]:hover {  background: #ffffff; border-color: #ffffff; color: #0d0d0d; }
+	
+select {
+	border: 1px solid #d9d9d9 ;
+	font-family: 'Lato';
+	font-size: 14px;
+	font-weight: 300;
+	height: 44px;
+	width: auto;
+	padding:8px;
+	color: #b2b2b2;
+	border-radius: 0px;
+	-moz-border-radius:0x; 
+	-khtml-border-radius:0px; 
+	-webkit-border-radius:0px;
+	}
+select:hover {	border-color: #0d0d0d; }
+	
+select option {
+	cursor: pointer;
+	padding: 5px 7px;
+	}
+	
+label {
+	line-height: 24px;
+	margin-bottom: 5px;
+	width: 100%;
+	color: #0d0d0d;
+	font-size: 12px;
+	font-weight: 400;
+	text-transform: uppercase; 
+	letter-spacing: 0.15em;
+	}
+	.text-light label { color: #ffffff; }
+	.form-row.false label { color: #fa4d5a; }
+	
+form {
+	// margin-top: 80px;
+	width: 50%;
+	margin: 80px auto 0;
+	}
+	
+form .formRow {
+	margin-top: 40px;
+	position: relative;
+	}
+	
+form .formSubmit {
+	margin-top: 40px;
+	}
+	
+div form:first-child, form .form-row:first-child 	 {
+	margin-top: 0px;
+    }
+    
+/* Chech formular */
+.formNote {
+	display: none;
+	margin-top: 20px;
+	}
+
+.alert{
+	margin-top: 20px;
+}
+
+div .alert:first-child{
+	margin: 0
+}
+
+.alert h6 {
+	padding-bottom: 2px;
+	display: inline-block;
+	}	
+	
+
+.alert-info { color: #3fabf6; }
+.alert-note { color: #fcad25; }
+.alert-confirm { color: #8fc236; }
+.alert-error { color: #fa4d5a; }
+
+.socialmediaWidget {
+	margin: 20px 0 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.socialmediaWidget:first-child { 
+	margin: 0; 
+}
+	
+.socialmediaWidget li {
+	display: inline-block;
+	*display: inline; 
+	*zoom: 1; 
+	background: transparent;
+	padding: 0px;
+	margin: 0 12px 0 0;
+	position: relative;
+	height: 18px;
+	line-height: 18px;
+}
+	
+.socialmediaWidget li:last-child { 
+	margin: 0; 
+}
+	
+.socialmediaWidget li a {
+	font-size: 15px;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 18px;
+	color: #0d0d0d;
+	}
+
+.socialmediaWidget li:hover a{
+	transform: scale(1.5);
+}

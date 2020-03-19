@@ -1,0 +1,225 @@
+html{
+	height: 100%;
+	font-size: 100%;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+
+body{
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+	font-weight: 300;
+	letter-spacing: 0.02em;
+	font-size:15px; 
+	line-height: 26px;
+	color:#4d4d4d; 
+	text-align: left; 
+	position: relative;
+	background: #ffffff;
+	height: 100%;
+}
+
+.wrapper{
+	overflow: hidden;
+	margin: 0 auto;
+	max-width: 1080px;
+}
+
+::selection { 
+	background:#0d0d0d; 
+	color:#ffffff; 
+}
+
+::-moz-selection { 
+	background:#0d0d0d; 
+	color:#ffffff;
+}
+
+::-webkit-selection { 
+	background:#0d0d0d; 
+	color:#ffffff; 
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Montserrat'; 
+	font-weight: 400;
+	color: #0d0d0d;
+	padding: 0;
+	margin: 0;
+}
+
+h1 { font-size: 80px; line-height: 104px; }
+h2 { font-size: 70px; line-height: 82px; }
+h3 { font-size: 44px; line-height: 54px; }
+h4 { font-size: 28px; line-height: 38px; }
+h5 { font-size: 21px; line-height: 29px; }
+h6 { font-size: 16px; line-height: 24px; }
+
+strong{
+	font-weight: 600;
+}
+
+ul{
+	list-style-type: none;
+	margin-top: 20px;
+	margin-left: 15px;
+	padding: 0;
+	li{
+		margin-top: 10px;
+	}
+	li:first-child{
+		margin-top: 0;
+	}
+}
+
+div ul:first-child, li ul:first-child { 
+	margin-top: 0px; 
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color:rgba(0,0,0,0.0);
+	}
+	
+
+img{
+	max-width: 100%;
+	display: inline-block;
+	margin: 0;
+	vertical-align: top;
+	border: 0;
+	-ms-interpolation-mode: bicubic;
+}
+
+.sectionInner{
+	padding-top: 120px;
+}
+
+.altTitle{
+	font-family: 'Lato';
+	font-weight: 300;
+	margin-top: 10px;
+}
+
+// big letter 
+[data-bigletter] { position: relative; z-index: 1; }
+[data-bigletter]:before {
+	z-index: -1;
+	content: attr(data-bigletter);
+	font-weight: 700;
+	font-size: 1.9em;
+	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	position: absolute;
+	top: -0.25em;
+	left: -0.35em;
+	text-align: center;
+	-webkit-transition: all 600ms 0.2s ease;
+    -moz-transition: all 600ms 0.2s ease;
+    -o-transition: all 600ms 0.2s ease;
+    -ms-transition: all 600ms 0.2s ease;
+    transition: all 600ms 0.2s ease;
+} 
+.align-center [data-bigletter]:before, nav#main-nav [data-bigletter]:before { 
+	left: 50%; 
+	width: 1200px; 
+	margin-left: -600px; 
+}
+
+.align-right [data-bigletter]:before { 
+	left: inherit; 
+	right: -0.35em; 
+}
+
+.visible[data-bigletter]:before { 
+	top: -0.02em; 
+	opacity: 0.07; 
+	filter: alpha(opacity=7); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=7)"; 
+}
+	
+.text-light .visible[data-bigletter]:before { 			opacity: 0.15; 
+	filter: alpha(opacity=15); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=15)"; 
+}
+
+.bodyborderTop, 
+.bodyborderLeft,
+.bodyborderBottom,
+.bodyborderRight{
+	background: #f0f0f0;
+	position: fixed;
+	z-index: 100002;
+	-webkit-transition: all 0.6s 0s ease;
+    -moz-transition: all 0.6s 0s ease;
+    -o-transition: all 0.6s 0s ease;
+    -ms-transition: all 0.6s 0s ease;
+    transition: all 0.6s 0s ease;
+}
+
+.bodyborderLeft,
+.bodyborderRight{
+	top: 0; 
+	bottom: 0;
+	width: 40px;
+}
+
+.bodyborderLeft{
+	left: -40px
+}
+
+.bodyborderRight{
+	right: -40px
+}
+
+.bodyborderTop,
+.bodyborderBottom{
+	left: 0; 
+	right: 0;
+	height: 40px;
+}
+
+.bodyborderTop{
+	top: -40px;
+}
+
+.bodyborderBottom{
+	bottom: -40px;
+}
+
+.separator {  
+	position: relative;
+	width: 100%;
+	margin: 18px 0 15px 0;
+	height: 5px;
+	display: block;
+	}
+	
+.separator span {
+	display: block;
+	position: relative;
+	margin: 0 0 0 34px;
+	width: 5px;
+	height: 5px;
+	margin: 0 auto;
+	background: #0d0d0d;
+	border-radius: 10px;
+	-moz-border-radius:10px; 
+	-khtml-border-radius:10px; 
+	-webkit-border-radius:10px;
+}
+
+.separator span:before, .separator span:after{
+    content:"";
+    vertical-align: top;
+    display:inline-block;
+    width:28px;
+    height:2px;
+    border-bottom:1px solid #0d0d0d;
+	position: absolute;
+	top: 0;
+	right: 12px;
+}
+
+.separator span:after{
+	right: -35px
+}

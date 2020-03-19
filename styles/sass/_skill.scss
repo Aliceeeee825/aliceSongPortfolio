@@ -1,0 +1,79 @@
+.titleAlignCenter{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.columnSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 75vh;
+}
+
+.skillContent{
+    width: 25%;
+    height: 25%;
+    transition: all 0.5s;
+    i{
+        font-size: 4rem;
+        margin: auto auto;
+    }
+    img{
+        width: 23.5%;
+    }
+}
+
+.skillName {
+    margin-top: 5%;
+}
+
+.html{
+    cursor: url('/assets/rsz_htmllogo.png'), auto;
+}
+
+.css{
+    cursor: url('/assets/rsz_cssLogo.png'), auto;
+}
+
+.sass{
+    cursor: url('/assets/rsz_sassLogo.png'), auto;
+}
+
+.js{
+    cursor: url('/assets/rsz_jsLogo.png'), auto;
+}
+
+.jquery{
+    cursor: url('/assets/rsz_jqueryLogo.png'), auto;
+}
+
+.react{
+    cursor: url('/assets/rsz_reactLogo.png'), auto;
+}
+
+.github{
+    cursor: url('/assets/rsz_githubLogo.png'), auto;
+}
+
+.firebase{
+    cursor: url('/assets/rsz_firebaseLogo.png'), auto;
+}
+
+.creativity{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.creativityInner h6,
+.creativityInner h2{
+    color: white;
+    text-align: center;
+}
+
+.creativityInner h2{
+    font-weight: 700;
+    text-transform: uppercase;
+}
