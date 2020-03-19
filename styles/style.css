@@ -996,7 +996,7 @@ nav#main-nav [data-bigletter]:before {
 
 #about {
   height: 90vh;
-  margin-top: 60%;
+  margin-top: 650px;
 }
 
 #about [data-bigletter]:before {
@@ -1014,22 +1014,91 @@ nav#main-nav [data-bigletter]:before {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-left: 5%;
 }
 
 .splitLeft {
-  width: 40%;
-}
-
-.splitLeft img {
-  border-radius: 20px;
+  width: 110%;
 }
 
 .splitRight {
   margin-left: 5%;
+}
+
+.splitRight p {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.splitRight span {
+  color: #191970;
+  font-weight: 700;
+}
+
+.splitRight span.nintendo {
+  color: #ff4554;
+}
+
+.splitRight span.switch {
+  color: #00c3e3;
+}
+
+@media (max-width: 1210px) {
+  #about .sectionInner {
+    width: 90%;
+  }
+}
+
+@media (max-width: 970px) {
+  #about {
+    margin-top: 580px;
+  }
+  .splitRight p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 876px) {
+  .splitRight {
+    width: 150%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 720px) {
+  #about {
+    margin-bottom: 200px;
+  }
+  .splitSection {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .splitSection h2 {
+    font-size: 60px;
+  }
+  .splitLeft {
+    width: 40%;
+  }
+  .splitRight {
+    width: 80%;
+  }
+}
+
+@media (max-width: 680px) {
+  .splitRight h2 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  #about {
+    margin-bottom: 250px;
+  }
 }
 
 .titleAlignCenter {
