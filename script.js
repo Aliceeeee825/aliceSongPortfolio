@@ -3,7 +3,7 @@
         $("body").addClass("loading"); 
         console.log('page loading')
     }, 200); // Start loading animation
- 
+
     $(document).ready(function(){
         //preloader 
         const openSection = window.location.hash.substr(1);
@@ -66,21 +66,7 @@
             });
         }
 
-
-
-        //drop down menu
         $('nav ul').on("click", "li", function () {
-            if ($(window).width() < 1025) {
-                if ($(this).find("ul").length > 0) {
-                    if ($(this).find("ul").css('visibility') == 'hidden') {
-                        $(this).addClass("hovered");
-                        return false;
-                    } else {
-                        $(this).removeClass("hovered");
-                        return false;
-                    }
-                }
-            }
             const href = $(this).find('a').attr('href');
             if (href.charAt(0) !== '#') {
                 smoothtransistion(href);
@@ -90,7 +76,6 @@
                 return true;
             }
         });
-
 
         // open nav
         $('.openNav').on("click",function () {
@@ -123,7 +108,6 @@
             $('nav').removeClass("navVisible");
             $('.navInner').animate({ marginTop: '0px', opacity: 0 }, 700, 'easeInOutExpo', function () { });
             $("nav").delay(100).slideUp(700, 'easeInOutExpo');
-
         }
 
 
@@ -135,7 +119,6 @@
 
         //slider
         if ($().owlCarousel) {
-
             /* for all owlslider classes (single item) */
             $(".owlslider").owlCarousel({
                 autoPlay: false,
@@ -168,12 +151,10 @@
         //big letter
         $('h1[data-bigletter],h2[data-bigletter],h3[data-bigletter],h4[data-bigletter],h5[data-bigletter],h6[data-bigletter]').each(function () {
             if ($(window).width() > 700) {
-                // const visible = jQuery(this).visible(false);
-                // if (visible) {
-                    if ($(this).hasClass("visible")) { } else { $(this).addClass("visible"); }
-                // } else {
-                    $(this).removeClass("visible");
-                // }
+                    if ($(this).hasClass("visible")) {
+                    } else { 
+                        $(this).addClass("visible"); 
+                    }
             } else {
                 $(this).addClass("visible");
             }

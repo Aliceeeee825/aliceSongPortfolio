@@ -1,6 +1,10 @@
 #about{
-    margin-top: 70%;
-    height: 90vh
+    height: 90vh;
+    margin-top:60%;
+}
+
+#about [data-bigletter]:before{
+    left: 10%;
 }
 
 .splitSection{

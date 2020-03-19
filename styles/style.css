@@ -361,6 +361,7 @@ img {
 
 .sectionInner {
   padding-top: 120px;
+  margin: 0 auto;
 }
 
 .altTitle {
@@ -384,34 +385,17 @@ img {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
   position: absolute;
   top: -0.25em;
-  left: -0.35em;
+  left: 45%;
   text-align: center;
   -webkit-transition: all 600ms 0.2s ease;
   transition: all 600ms 0.2s ease;
 }
 
-.align-center [data-bigletter]:before, nav#main-nav [data-bigletter]:before {
-  left: 50%;
-  width: 1200px;
-  margin-left: -600px;
-}
-
-.align-right [data-bigletter]:before {
-  left: inherit;
-  right: -0.35em;
-}
-
 .visible[data-bigletter]:before {
-  top: -0.02em;
+  top: -0.1em;
   opacity: 0.07;
   filter: alpha(opacity=7);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=7)";
-}
-
-.text-light .visible[data-bigletter]:before {
-  opacity: 0.15;
-  filter: alpha(opacity=15);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=15)";
 }
 
 .bodyborderTop,
@@ -936,9 +920,87 @@ nav#main-nav [data-bigletter]:before {
   color: white;
 }
 
+@media (max-width: 970px) {
+  h1 {
+    font-size: 70px;
+  }
+  h3 {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 710px) {
+  h1 {
+    font-size: 60px;
+  }
+  h3 {
+    font-size: 30px;
+  }
+  .menu {
+    left: 84%;
+  }
+  .openNav, .defaultLogo {
+    padding: 4%;
+  }
+  .defaultLogo {
+    left: 5%;
+  }
+}
+
+@media (max-width: 490px) {
+  .headerText {
+    margin: 25% 15%;
+  }
+  h1 {
+    font-size: 50px;
+    line-height: 80px;
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .openNav, .defaultLogo {
+    padding: 5%;
+  }
+  .menu {
+    left: 80%;
+  }
+  .navVisible .navInner {
+    top: 25%;
+  }
+  .navInner ul li {
+    display: block;
+    padding: 3% 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .headerText {
+    margin: 45% 20%;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 8%;
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .menu {
+    left: 70%;
+  }
+  .defaultLogo {
+    left: 10%;
+  }
+}
+
 #about {
-  margin-top: 70%;
   height: 90vh;
+  margin-top: 60%;
+}
+
+#about [data-bigletter]:before {
+  left: 10%;
 }
 
 .splitSection {

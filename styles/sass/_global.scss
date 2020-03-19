@@ -95,6 +95,8 @@ img{
 
 .sectionInner{
 	padding-top: 120px;
+	// width: 100%;
+	margin: 0 auto;
 }
 
 .altTitle{
@@ -104,7 +106,11 @@ img{
 }
 
 // big letter 
-[data-bigletter] { position: relative; z-index: 1; }
+[data-bigletter] { 
+	position: relative; 
+	z-index: 1; 
+}
+
 [data-bigletter]:before {
 	z-index: -1;
 	content: attr(data-bigletter);
@@ -113,7 +119,7 @@ img{
 	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 	position: absolute;
 	top: -0.25em;
-	left: -0.35em;
+	left: 45%;
 	text-align: center;
 	-webkit-transition: all 600ms 0.2s ease;
     -moz-transition: all 600ms 0.2s ease;
@@ -121,25 +127,11 @@ img{
     -ms-transition: all 600ms 0.2s ease;
     transition: all 600ms 0.2s ease;
 } 
-.align-center [data-bigletter]:before, nav#main-nav [data-bigletter]:before { 
-	left: 50%; 
-	width: 1200px; 
-	margin-left: -600px; 
-}
-
-.align-right [data-bigletter]:before { 
-	left: inherit; 
-	right: -0.35em; 
-}
 
 .visible[data-bigletter]:before { 
-	top: -0.02em; 
+	top: -0.1em;
 	opacity: 0.07; 
 	filter: alpha(opacity=7); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=7)"; 
-}
-	
-.text-light .visible[data-bigletter]:before { 			opacity: 0.15; 
-	filter: alpha(opacity=15); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=15)"; 
 }
 
 .bodyborderTop, 
