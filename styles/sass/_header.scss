@@ -1,7 +1,7 @@
 header{
     // background: url('../assets/1690x1100.jpg');
     background: url('../assets/headerBg.jpg');
-    height: 95vh;
+    max-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1000;
@@ -9,6 +9,7 @@ header{
     position: absolute;
     top: 0;
     left: 0;
+    overflow-x: hidden;
 }
 
 .logo{
@@ -310,6 +311,10 @@ nav [data-bigletter]:before {
     .openNav span::after{
             background-color: black;
         }
+    .openNav span.is-clicked:before, 
+    .openNav span.is-clicked:after { 
+        background-color: #ffffff; 
+    }
 } 
 
 

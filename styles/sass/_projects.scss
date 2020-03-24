@@ -271,7 +271,31 @@
 	width:20%;
 	margin-left: -10%;
 	}
-	.titleAlignCenter h5{
+	.titleAlignCenter h5,
+	.overlayName{
 		font-size: 18px;
+	}
+	.overlaycaption{
+		margin-top: 5%
+	}
+	.imgoverlay:hover .overlaycaption .overlayName{
+		padding-bottom: 10px;
+	}
+	.imgoverlay:hover .overlaycaption .alttitle{
+		padding-top: 10px;
+		width: 90%;
+		margin: 0 auto;
+	}
+	.overlaycaption .alttitle{
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+}
+
+@media (max-width: 400px){
+	.titleAlignCenter h5{
+		width: 77%;
+		margin: 5% auto 8%;
 	}
 }

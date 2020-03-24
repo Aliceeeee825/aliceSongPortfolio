@@ -643,7 +643,7 @@ body.loading-end .page-loader-inner h6 {
 
 header {
   background: url("../assets/headerBg.jpg");
-  height: 95vh;
+  max-height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 1000;
@@ -651,6 +651,7 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+  overflow-x: hidden;
 }
 
 .logo {
@@ -946,6 +947,11 @@ nav [data-bigletter]:before {
 .stickyHeader .menu .openNav span::before,
 .stickyHeader .menu .openNav span::after {
   background-color: black;
+}
+
+.stickyHeader .menu .openNav span.is-clicked:before,
+.stickyHeader .menu .openNav span.is-clicked:after {
+  background-color: #ffffff;
 }
 
 .stickyHeader .fixedLogo {
@@ -1530,8 +1536,31 @@ nav [data-bigletter]:before {
     width: 20%;
     margin-left: -10%;
   }
-  .titleAlignCenter h5 {
+  .titleAlignCenter h5,
+  .overlayName {
     font-size: 18px;
+  }
+  .overlaycaption {
+    margin-top: 5%;
+  }
+  .imgoverlay:hover .overlaycaption .overlayName {
+    padding-bottom: 10px;
+  }
+  .imgoverlay:hover .overlaycaption .alttitle {
+    padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .overlaycaption .alttitle {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .titleAlignCenter h5 {
+    width: 77%;
+    margin: 5% auto 8%;
   }
 }
 
@@ -1834,7 +1863,7 @@ footer .backToTop {
   position: absolute;
   top: 50%;
   margin-top: -10px;
-  left: 50%;
+  right: 45%;
   margin-left: -27px;
 }
 
@@ -1865,4 +1894,10 @@ footer .backToTop:hover:after {
   bottom: -90px;
   z-index: 100002;
   left: -20px;
+}
+
+@media (max-width: 600px) {
+  .stickyFooter .backToTop {
+    right: -45px;
+  }
 }
