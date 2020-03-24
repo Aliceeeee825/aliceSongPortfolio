@@ -1,10 +1,10 @@
 
     setTimeout(function () { 
         $("body").addClass("loading"); 
-        console.log('page loading')
     }, 200); // Start loading animation
 
     $(document).ready(function(){
+        reorganizeIsotope();
         //preloader 
         const openSection = window.location.hash.substr(1);
         const borderWidthHeight = parseInt($(".bodyborderTop").height());
@@ -101,7 +101,6 @@
 
         // open nav
         $('.openNav').on("click",function () {
-            console.log('nav clicked')
             const hidden = $('nav').css('display');
             const borderWidthHeight = parseInt($("#page-content").css("padding-top"));
             const fullheight = $(window).height() - (borderWidthHeight * 2);
@@ -199,26 +198,6 @@
     }
 
     //sticky header and footer
-    const headerHeight = $('header').height()
-    const headerTop = $('header').offset().top;
-    let headerStickyLoad = false;
-    let footerStickyLoad = false;
-    const headerOverlay = false;
-    const paddingTop = parseInt($('.wrapper').css('padding-top'))
-    
-    if ($('.stickyHeader').length > 0){
-        headerStickyLoad = true
-    }
-    if ($('.stickyFooter').length > 0) {
-        footerStickyLoad = true
-    }
-
-    function fixHeader() {
-
-    }
-
-        
-
     $(window).scroll(function(){
         const body = document.body 
         const html = document.documentElement;
@@ -228,11 +207,9 @@
         const currentLocation = window.pageYOffset
         const headerHeight = $('header').height()
         const footerHeight = height - window.innerHeight - 250
-        console.log(currentLocation > footerHeight)
         //when leave the header
         if (currentLocation > headerHeight){
             $('header').addClass('stickyHeader')
-            // console.log('asda')
             if (currentLocation < footerHeight){
             $('footer').addClass('stickyFooter')
             }

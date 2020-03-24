@@ -1900,4 +1900,7 @@ footer .backToTop:hover:after {
   .stickyFooter .backToTop {
     right: -45px;
   }
+  footer .backToTop {
+    right: -5px;
+  }
 }
