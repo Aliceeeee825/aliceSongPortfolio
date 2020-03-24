@@ -405,7 +405,7 @@ img {
 .bodyborderRight {
   background: #f0f0f0;
   position: fixed;
-  z-index: 100002;
+  z-index: 102;
   -webkit-transition: all 0.6s 0s ease;
   transition: all 0.6s 0s ease;
 }
@@ -553,6 +553,7 @@ body.loading-end .pace {
 }
 
 .page-loader-inner .loader-logo-name {
+  color: #ffffff;
   position: absolute;
   top: 0px;
   left: 50%;
@@ -587,6 +588,7 @@ body.loading-end .loader-logo-name {
 }
 
 .page-loader-inner h6 {
+  color: #ffffff;
   font-size: 12px;
   margin-top: -30px;
   transition: all 800ms .1s ease-in-out;
@@ -683,7 +685,7 @@ header {
 
 .menu {
   position: relative;
-  left: 90%;
+  right: -93%;
 }
 
 nav {
@@ -814,7 +816,7 @@ nav {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-nav#main-nav [data-bigletter]:before {
+nav [data-bigletter]:before {
   top: -0.25em;
   font-size: 2.6em;
   -webkit-transition: all 400ms ease;
@@ -933,6 +935,26 @@ nav#main-nav [data-bigletter]:before {
   color: white;
 }
 
+.stickyHeader .menu {
+  position: fixed;
+  z-index: 100003;
+  top: 10px;
+  right: 40px;
+}
+
+.stickyHeader .menu .openNav span,
+.stickyHeader .menu .openNav span::before,
+.stickyHeader .menu .openNav span::after {
+  background-color: black;
+}
+
+.stickyHeader .fixedLogo {
+  opacity: 1;
+  z-index: 100003;
+  position: fixed;
+  left: 39px;
+}
+
 @media (max-width: 970px) {
   h1 {
     font-size: 70px;
@@ -950,7 +972,7 @@ nav#main-nav [data-bigletter]:before {
     font-size: 30px;
   }
   .menu {
-    left: 84%;
+    right: -84%;
   }
   .openNav, .defaultLogo {
     padding: 4%;
@@ -975,7 +997,7 @@ nav#main-nav [data-bigletter]:before {
     padding: 5%;
   }
   .menu {
-    left: 80%;
+    right: -80%;
   }
   .navVisible .navInner {
     top: 25%;
@@ -1158,7 +1180,7 @@ nav#main-nav [data-bigletter]:before {
   cursor: url("/assets/rsz_sassLogo.png"), auto;
 }
 
-.js {
+.jsSkill {
   cursor: url("/assets/rsz_jsLogo.png"), auto;
 }
 
@@ -1298,15 +1320,8 @@ nav#main-nav [data-bigletter]:before {
 }
 
 .masonry {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin-left: 8%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  width: 100%;
+  margin-left: 10%;
   margin-bottom: 20%;
 }
 
@@ -1314,6 +1329,7 @@ nav#main-nav [data-bigletter]:before {
   width: 45%;
   margin-right: 0px;
   margin-bottom: 0px;
+  float: left;
 }
 
 .horizontalSection {
@@ -1419,8 +1435,19 @@ nav#main-nav [data-bigletter]:before {
   transform: translate3d(0, -50%, 0);
 }
 
-.overlaycaption .alttitle i {
+.githubIcon {
+  z-index: 100;
+}
+
+.githubIcon i {
   margin-top: 12%;
+  color: black;
+  padding: 1%;
+}
+
+.githubIcon i:hover {
+  background: #6e5494;
+  color: white;
 }
 
 .overlayName {
@@ -1484,6 +1511,28 @@ nav#main-nav [data-bigletter]:before {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+@media (max-width: 900px) {
+  .overlayName, .overlaycaption .alttitle, .overlaycaption .separator {
+    top: 30%;
+  }
+  .overlaycaption .alttitle i {
+    margin-top: 20%;
+  }
+}
+
+@media (max-width: 450px) {
+  .filter li {
+    display: block;
+  }
+  .filter li a:hover:after, .filter li a.active:after {
+    width: 20%;
+    margin-left: -10%;
+  }
+  .titleAlignCenter h5 {
+    font-size: 18px;
+  }
 }
 
 ::-webkit-input-placeholder {
@@ -1742,7 +1791,7 @@ div .alert:first-child {
 }
 
 footer {
-  padding: 100px 0;
+  padding: 100px 60px;
   transition: all 400ms 0.2s ease;
   -webkit-transition: all 400ms 0.2s ease;
   -moz-transition: all 400ms 0.2s ease;
@@ -1808,4 +1857,12 @@ footer .backToTop:after {
 footer .backToTop:hover:after {
   width: 96%;
   margin-left: -43%;
+}
+
+.stickyFooter {
+  width: 100%;
+  position: fixed;
+  bottom: -90px;
+  z-index: 100002;
+  left: -20px;
 }

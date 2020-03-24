@@ -46,10 +46,9 @@
 
                 container.isotope({
                     itemSelector: '.masonry-item',
-                    transformsEnabled: true			
+                    transformsEnabled: true,
                 });
             });
-
 
             //isotope's filter
             $('.filter li a').on('click', function () {
@@ -65,6 +64,29 @@
                 return (false);
             });
         }
+
+        function reorganizeIsotope() {
+            $('.masonry').each(function () {
+                const container = $(this);
+                const maxitemwidth = container.data('maxitemwidth');
+                if (!maxitemwidth) { maxitemwidth = 370; }
+                const containerwidth = Math.ceil(((container.width() + (parseInt(container.css('margin-left')) * 2)) / 120) * 100 - (parseInt(container.css('margin-left')) * 2));
+                //alert(containerwidth);
+                const itemmargin = parseInt(container.children('div').css('marginRight')) + parseInt(container.children('div').css('marginLeft'));
+                const rows = Math.ceil(containerwidth / maxitemwidth);
+                const marginperrow = (rows - 1) * itemmargin;
+                const newitemmargin = marginperrow / rows;
+                const itemwidth = Math.floor((containerwidth / rows) - newitemmargin + 1);
+                //$container.css({ 'width': '110%' });
+                container.children('div').css({ 'width': itemwidth + 'px' });
+                if (container.children('div').hasClass('isotope-item')) { container.isotope('reLayout'); }
+            });
+        }
+        reorganizeIsotope();
+
+        $(window).resize(function () {
+            reorganizeIsotope();
+        });
 
         $('nav ul').on("click", "li", function () {
             const href = $(this).find('a').attr('href');
@@ -175,4 +197,53 @@
             }
         });
     }
+
+    //sticky header and footer
+    const headerHeight = $('header').height()
+    const headerTop = $('header').offset().top;
+    let headerStickyLoad = false;
+    let footerStickyLoad = false;
+    const headerOverlay = false;
+    const paddingTop = parseInt($('.wrapper').css('padding-top'))
+    
+    if ($('.stickyHeader').length > 0){
+        headerStickyLoad = true
+    }
+    if ($('.stickyFooter').length > 0) {
+        footerStickyLoad = true
+    }
+
+    function fixHeader() {
+
+    }
+
+        
+
+    $(window).scroll(function(){
+        const body = document.body 
+        const html = document.documentElement;
+
+        const height = Math.max(body.scrollHeight, body.offsetHeight,
+            html.clientHeight, html.scrollHeight, html.offsetHeight);
+        const currentLocation = window.pageYOffset
+        const headerHeight = $('header').height()
+        const footerHeight = height - window.innerHeight - 250
+        console.log(currentLocation > footerHeight)
+        //when leave the header
+        if (currentLocation > headerHeight){
+            $('header').addClass('stickyHeader')
+            // console.log('asda')
+            if (currentLocation < footerHeight){
+            $('footer').addClass('stickyFooter')
+            }
+            else{
+                $('footer').removeClass('stickyFooter')
+            }
+        }
+        else{
+            $('header').removeClass('stickyHeader')
+            $('footer').removeClass('stickyFooter')
+        }
     })
+
+})

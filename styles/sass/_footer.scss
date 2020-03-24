@@ -1,5 +1,5 @@
 footer {
-    padding: 100px 0;
+    padding: 100px 60px;
 	transition: all 400ms 0.2s ease;
 	-webkit-transition: all 400ms 0.2s ease;
     -moz-transition: all 400ms 0.2s ease;
@@ -63,3 +63,10 @@ footer .backToTop:hover:after {
 	margin-left: -43%;
 	}
 	
+.stickyFooter {
+	width: 100%;
+	position: fixed;
+	bottom: -90px;
+	z-index: 100002;
+	left: -20px
+}
