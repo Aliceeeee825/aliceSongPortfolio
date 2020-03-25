@@ -8,14 +8,14 @@
         //preloader 
         const openSection = window.location.hash.substr(1);
         const borderWidthHeight = parseInt($(".bodyborderTop").height());
-        $("#page-loader .page-loader-inner").delay(200).fadeIn(10, function () {
-            $("body").addClass("loading-end");
-            $("#page-loader .page-loader-inner").fadeOut(1000, function () {
+        $("#pageLoader .pageLoaderInner").delay(200).fadeIn(10, function () {
+            $("body").addClass("loadingEnd");
+            $("#pageLoader .pageLoaderInner").fadeOut(1000, function () {
                 if (openSection) {
                     $('html,body').animate({ scrollTop: $("#" + openSection).offset().top - $("header").height() + 80 }, 10, 'easeInOutExpo');
                 }
             });
-            $("#page-loader").delay(1300).animate({ top: borderWidthHeight + 'px', height: $(window).height() - (borderWidthHeight * 2) + 'px' }, 10).slideUp(1000, 'easeInOutExpo', function () { $("#page-loader").animate({ top: '0', height: '100%' }, 10) });
+            $("#pageLoader").delay(1300).animate({ top: borderWidthHeight + 'px', height: $(window).height() - (borderWidthHeight * 2) + 'px' }, 10).slideUp(1000, 'easeInOutExpo', function () { $("#pageLoader").animate({ top: '0', height: '100%' }, 10) });
         });
 
         //transitions
@@ -31,10 +31,10 @@
         });
 
         function smoothtransistion(url) {
-            $("#page-loader").slideDown(800, 'easeInOutExpo', function () {
+            $("#pageLoader").slideDown(800, 'easeInOutExpo', function () {
                 setTimeout(function () { window.location = url; }, 300);
             });
-            setTimeout(function () { $("body").removeClass("loading-end"); }, 500);
+            setTimeout(function () { $("body").removeClass("loadingEnd"); }, 500);
         }
 
 
@@ -72,14 +72,16 @@
                 if (!maxitemwidth) { maxitemwidth = 370; }
                 const containerwidth = Math.ceil(((container.width() + (parseInt(container.css('margin-left')) * 2)) / 120) * 100 - (parseInt(container.css('margin-left')) * 2));
                 //alert(containerwidth);
-                const itemmargin = parseInt(container.children('div').css('marginRight')) + parseInt(container.children('div').css('marginLeft'));
+                const itemmargin = parseInt(container.children('div').css('margin-right')) + parseInt(container.children('div').css('margin-left'));
                 const rows = Math.ceil(containerwidth / maxitemwidth);
                 const marginperrow = (rows - 1) * itemmargin;
                 const newitemmargin = marginperrow / rows;
                 const itemwidth = Math.floor((containerwidth / rows) - newitemmargin + 1);
                 //$container.css({ 'width': '110%' });
                 container.children('div').css({ 'width': itemwidth + 'px' });
-                if (container.children('div').hasClass('isotope-item')) { container.isotope('reLayout'); }
+                if (container.children('div').hasClass('isotope-item')) { 
+                    container.isotope('reLayout'); 
+                }
             });
         }
         reorganizeIsotope();
@@ -102,13 +104,13 @@
         // open nav
         $('.openNav').on("click",function () {
             const hidden = $('nav').css('display');
-            const borderWidthHeight = parseInt($("#page-content").css("padding-top"));
+            const borderWidthHeight = parseInt($("#pageContent").css("padding-top"));
             const fullheight = $(window).height() - (borderWidthHeight * 2);
 
             if (hidden == 'block') {
                 hideResponsiveNav();
             } else {
-                $('.openNav span').toggleClass('is-clicked');
+                $('.openNav span').toggleClass('isClicked');
                 $('nav').slideDown(700, 'easeInOutExpo', function () {
                     $('nav').addClass("navVisible");
                     const menuHeight = $(".navInner").height();
@@ -125,7 +127,7 @@
         });
 
         function hideResponsiveNav() {
-            $('.openNav span').toggleClass('is-clicked');
+            $('.openNav span').toggleClass('isClicked');
             $('nav').removeClass("navVisible");
             $('.navInner').animate({ marginTop: '0px', opacity: 0 }, 700, 'easeInOutExpo', function () { });
             $("nav").delay(100).slideUp(700, 'easeInOutExpo');
@@ -159,8 +161,6 @@
         if ($().parallax) {
             $('.parallax-section').parallax();
         }
-
-
 
     $(window).scroll(function () {
         smoothShow();

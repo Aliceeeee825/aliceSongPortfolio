@@ -514,7 +514,7 @@ body.loading .pace {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-body.loading-end .pace {
+body.loadingEnd .pace {
   top: 40%;
   opacity: 0 !important;
   filter: alpha(opacity=0) !important;
@@ -533,7 +533,7 @@ body.loading-end .pace {
   display: none;
 }
 
-#page-loader {
+#pageLoader {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -541,7 +541,7 @@ body.loading-end .pace {
   z-index: 10001;
 }
 
-.page-loader-inner {
+.pageLoaderInner {
   width: 200px;
   height: 1px;
   position: absolute;
@@ -552,7 +552,7 @@ body.loading-end .pace {
   text-align: center;
 }
 
-.page-loader-inner .loader-logo-name {
+.pageLoaderInner .loaderLogoName {
   color: #ffffff;
   position: absolute;
   top: 0px;
@@ -570,24 +570,24 @@ body.loading-end .pace {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
-body.loading .loader-logo-name {
+body.loading .loaderLogoName {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-body.loading-end .loader-logo-name {
+body.loadingEnd .loaderLogoName {
   top: -60px;
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
-.page-loader-inner .loader-logo-name img {
+.pageLoaderInner .loaderLogoName img {
   max-height: 40px;
 }
 
-.page-loader-inner h6 {
+.pageLoaderInner h6 {
   color: #ffffff;
   font-size: 12px;
   margin-top: -30px;
@@ -601,41 +601,41 @@ body.loading-end .loader-logo-name {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
-body.loading .page-loader-inner h6 {
+body.loading .pageLoaderInner h6 {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
-body.loading-end .page-loader-inner h6 {
+body.loadingEnd .pageLoaderInner h6 {
   margin-top: -100px;
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 
-.loading-end .bodyborderTop, .loading-end .bodyborderBottom, .loading-end .bodyborderLeft, .loading-end .bodyborderRight {
+.loadingEnd .bodyborderTop, .loadingEnd .bodyborderBottom, .loadingEnd .bodyborderLeft, .loadingEnd .bodyborderRight {
   -webkit-transition: all 0.6s 0.8s ease;
   transition: all 0.6s 0.8s ease;
 }
 
-.loading-end .bodyborderTop {
+.loadingEnd .bodyborderTop {
   top: 0 !important;
 }
 
-.loading-end .bodyborderBottom {
+.loadingEnd .bodyborderBottom {
   bottom: 0 !important;
 }
 
-.loading-end .bodyborderLeft {
+.loadingEnd .bodyborderLeft {
   left: 0 !important;
 }
 
-.loading-end .bodyborderRight {
+.loadingEnd .bodyborderRight {
   right: 0 !important;
 }
 
-.loading-end .headerContent {
+.loadingEnd .headerContent {
   opacity: 1;
   filter: alpha(opacity=100);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -711,9 +711,7 @@ nav {
   filter: alpha(opacity=95);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
   -webkit-backface-visibility: hidden;
-  /* Chrome Issue */
   backface-visibility: hidden;
-  /* Chrome Issue */
 }
 
 .navLogo {
@@ -908,21 +906,21 @@ nav [data-bigletter]:before {
   transform: translateY(8px) rotate(0deg);
 }
 
-.openNav span.is-clicked {
+.openNav span.isClicked {
   background-color: transparent;
 }
 
-.openNav span.is-clicked:before,
-.openNav span.is-clicked:after {
+.openNav span.isClicked:before,
+.openNav span.isClicked:after {
   background-color: #ffffff;
 }
 
-.openNav span.is-clicked:before {
+.openNav span.isClicked:before {
   -webkit-transform: translateY(0) rotate(45deg);
   transform: translateY(0) rotate(45deg);
 }
 
-.openNav span.is-clicked:after {
+.openNav span.isClicked:after {
   -webkit-transform: translateY(0) rotate(-45deg);
   transform: translateY(0) rotate(-45deg);
 }
@@ -949,8 +947,8 @@ nav [data-bigletter]:before {
   background-color: black;
 }
 
-.stickyHeader .menu .openNav span.is-clicked:before,
-.stickyHeader .menu .openNav span.is-clicked:after {
+.stickyHeader .menu .openNav span.isClicked:before,
+.stickyHeader .menu .openNav span.isClicked:after {
   background-color: #ffffff;
 }
 
@@ -1062,7 +1060,7 @@ nav [data-bigletter]:before {
 }
 
 .splitLeft {
-  width: 110%;
+  width: 68%;
 }
 
 .splitRight {
@@ -1079,12 +1077,8 @@ nav [data-bigletter]:before {
   font-weight: 700;
 }
 
-.splitRight span.nintendo {
-  color: #ff4554;
-}
-
-.splitRight span.switch {
-  color: #00c3e3;
+.splitRight span.hobby {
+  font-weight: 400;
 }
 
 @media (max-width: 1210px) {
@@ -1154,7 +1148,7 @@ nav [data-bigletter]:before {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  height: 75vh;
+  height: 60vh;
 }
 
 .skillContent {
@@ -1219,7 +1213,7 @@ nav [data-bigletter]:before {
           align-items: center;
 }
 
-.creativityInner h6,
+.creativityInner h4,
 .creativityInner h2 {
   color: white;
   text-align: center;
@@ -1271,7 +1265,7 @@ nav [data-bigletter]:before {
 }
 
 .filter {
-  margin: 0;
+  margin: 10px 0 0 0;
   padding: 0;
   list-style: none;
   text-align: center;
@@ -1625,7 +1619,6 @@ input[type=text], input[type=password], input[type=email] {
   max-width: 100%;
 }
 
-/* padding issue (240 + 2*5 = 250) */
 textarea {
   width: 100%;
   min-height: 100px;
@@ -1633,8 +1626,9 @@ textarea {
   line-height: 26px;
 }
 
-/* padding issue (395 + 2*5 = 405) */
-.one-half input[type=text], .one-half input[type=password], .one-half input[type=email] {
+.one-half input[type=text],
+.one-half input[type=password],
+.one-half input[type=email] {
   width: 520px;
 }
 
@@ -1666,21 +1660,10 @@ input[type=submit] {
   position: relative;
 }
 
-.text-light input[type=submit] {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  color: #ffffff;
-}
-
 input[type=submit]:hover {
   background: #0d0d0d;
   color: #ffffff;
   border-color: #0d0d0d;
-}
-
-.text-light input[type=submit]:hover {
-  background: #ffffff;
-  border-color: #ffffff;
-  color: #0d0d0d;
 }
 
 select {
@@ -1716,14 +1699,6 @@ label {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-}
-
-.text-light label {
-  color: #ffffff;
-}
-
-.form-row.false label {
-  color: #fa4d5a;
 }
 
 form {

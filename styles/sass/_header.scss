@@ -1,5 +1,4 @@
 header{
-    // background: url('../assets/1690x1100.jpg');
     background: url('../assets/headerBg.jpg');
     max-height: 100vh;
     background-repeat: no-repeat;
@@ -70,8 +69,8 @@ nav{
 	opacity: 0.95; 
 	filter: alpha(opacity=95); 
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=95)";
-	-webkit-backface-visibility: hidden;							/* Chrome Issue */
-	backface-visibility: hidden;									/* Chrome Issue */
+	-webkit-backface-visibility: hidden;							
+	backface-visibility: hidden;									
     }
     
 .navLogo{
@@ -268,16 +267,16 @@ nav [data-bigletter]:before {
     transform: translateY(8px) rotate(0deg);
 }
 
-.openNav span.is-clicked {
+.openNav span.isClicked {
     background-color: transparent;
 }
 
-.openNav span.is-clicked:before, 
-.openNav span.is-clicked:after { 
+.openNav span.isClicked:before, 
+.openNav span.isClicked:after { 
     background-color: #ffffff; 
 }
 
-.openNav span.is-clicked:before {
+.openNav span.isClicked:before {
     -webkit-transform: translateY(0) rotate(45deg);
     -moz-transform: translateY(0) rotate(45deg);
     -ms-transform: translateY(0) rotate(45deg);
@@ -285,7 +284,7 @@ nav [data-bigletter]:before {
     transform: translateY(0) rotate(45deg);
 }
 
-.openNav span.is-clicked:after {
+.openNav span.isClicked:after {
     -webkit-transform: translateY(0) rotate(-45deg);
     -moz-transform: translateY(0) rotate(-45deg);
     -ms-transform: translateY(0) rotate(-45deg);
@@ -311,8 +310,8 @@ nav [data-bigletter]:before {
     .openNav span::after{
             background-color: black;
         }
-    .openNav span.is-clicked:before, 
-    .openNav span.is-clicked:after { 
+    .openNav span.isClicked:before, 
+    .openNav span.isClicked:after { 
         background-color: #ffffff; 
     }
 } 

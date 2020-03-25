@@ -33,11 +33,23 @@ input.false[type=text], input.false[type=password]:focus, input.false[type=email
 	border-color: #fa4d5a;
 }
 
-input[type=text], input[type=password], input[type=email] { width: 100%; max-width: 100%; }		/* padding issue (240 + 2*5 = 250) */
-textarea { width: 100%; min-height: 100px; max-width: 100%; line-height: 26px; }		/* padding issue (395 + 2*5 = 405) */
+input[type=text], input[type=password], input[type=email] { 
+	width: 100%; max-width: 100%; 
+}	
 
-.one-half input[type=text], .one-half input[type=password], .one-half input[type=email] { width: 520px; }
-.one-half textarea { width: 520px; }
+textarea { 
+	width: 100%; min-height: 100px; max-width: 100%; line-height: 26px; 
+}
+
+.one-half input[type=text], 
+.one-half input[type=password], 
+.one-half input[type=email] { 
+	width: 520px; 
+}
+
+.one-half textarea { 
+	width: 520px; 
+}
 
 input[type=submit] {
 	background: none;
@@ -65,10 +77,13 @@ input[type=submit] {
 	padding: 10px 30px;
 	position: relative;
 	}
-	.text-light input[type=submit] { border: 1px solid rgba(255,255,255,.4); color: #ffffff; }
 
-input[type=submit]:hover { background: #0d0d0d; color: #ffffff; border-color: #0d0d0d; }
-.text-light input[type=submit]:hover {  background: #ffffff; border-color: #ffffff; color: #0d0d0d; }
+input[type=submit]:hover { 
+	background: #0d0d0d; 
+	color: #ffffff; 
+	border-color: #0d0d0d; 
+}
+
 	
 select {
 	border: 1px solid #d9d9d9 ;
@@ -84,12 +99,15 @@ select {
 	-khtml-border-radius:0px; 
 	-webkit-border-radius:0px;
 	}
-select:hover {	border-color: #0d0d0d; }
+
+select:hover {	
+	border-color: #0d0d0d; 
+}
 	
 select option {
 	cursor: pointer;
 	padding: 5px 7px;
-	}
+}
 	
 label {
 	line-height: 24px;
@@ -100,28 +118,25 @@ label {
 	font-weight: 400;
 	text-transform: uppercase; 
 	letter-spacing: 0.15em;
-	}
-	.text-light label { color: #ffffff; }
-	.form-row.false label { color: #fa4d5a; }
+}
 	
 form {
-	// margin-top: 80px;
 	width: 50%;
 	margin: 80px auto 0;
-	}
+}
 	
 form .formRow {
 	margin-top: 40px;
 	position: relative;
-	}
+}
 	
 form .formSubmit {
 	margin-top: 40px;
-	}
+}
 	
-div form:first-child, form .form-row:first-child 	 {
+div form:first-child, form .form-row:first-child {
 	margin-top: 0px;
-    }
+}
     
 /* Chech formular */
 .formNote {

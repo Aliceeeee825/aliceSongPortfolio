@@ -1,5 +1,5 @@
 .filter{
-    margin: 0;
+    margin: 10px 0 0 0;
 	padding: 0;
     list-style: none;
     text-align: center;
@@ -48,22 +48,15 @@
 
 .masonry{
 	width: 100%;
-	// display: flex;
-	// flex-direction: column;
-	// flex-wrap: wrap;
 	margin-left: 10%;
-	// margin: 0 auto;
-	// justify-content: center;
 	margin-bottom: 20%;
 }
 
 .masonry-item {
-	// width: 24.98%;
 	width: 45%;
 	margin-right: 0px;
 	margin-bottom: 0px;
 	float: left;
-	// border: 1px solid black;
 }
 
 .horizontalSection{

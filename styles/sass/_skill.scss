@@ -8,7 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
-    height: 75vh;
+    height: 60vh;
 }
 
 .skillContent{
@@ -65,7 +65,7 @@
     align-items: center;
 }
 
-.creativityInner h6,
+.creativityInner h4,
 .creativityInner h2{
     color: white;
     text-align: center;
@@ -75,6 +75,7 @@
     font-weight: 700;
     text-transform: uppercase;
 }
+
 
 @media (max-width: 855px){
     .columnSection{
