@@ -27,6 +27,19 @@ body{
 	max-width: 1080px;
 }
 
+.skip-link {
+    position: absolute;
+    left: -1000px;
+    top: 5px;
+    z-index: 999999;
+    background: white;
+    color: black;
+}
+
+.skip-link:focus {
+    left: 0;
+}
+
 ::selection { 
 	background:#0d0d0d; 
 	color:#ffffff; 

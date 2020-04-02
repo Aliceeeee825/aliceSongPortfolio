@@ -71,7 +71,7 @@
                 const maxitemwidth = container.data('maxitemwidth');
                 if (!maxitemwidth) { maxitemwidth = 370; }
                 const containerwidth = Math.ceil(((container.width() + (parseInt(container.css('margin-left')) * 2)) / 120) * 100 - (parseInt(container.css('margin-left')) * 2));
-                //alert(containerwidth);
+                console.log(containerwidth);
                 const itemmargin = parseInt(container.children('div').css('margin-right')) + parseInt(container.children('div').css('margin-left'));
                 const rows = Math.ceil(containerwidth / maxitemwidth);
                 const marginperrow = (rows - 1) * itemmargin;
