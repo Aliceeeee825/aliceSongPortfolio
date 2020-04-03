@@ -1567,12 +1567,53 @@ nav [data-bigletter]:before {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
 }
 
+@media (max-width: 920px) {
+  .imgoverlay:hover .overlaycaption button,
+  .imgoverlay:focus .overlaycaption button,
+  .imgoverlay:active .overlaycaption button {
+    margin-top: 40%;
+  }
+  .masonry-item button {
+    padding: 5px 10px;
+    margin: 0 5px;
+  }
+}
+
 @media (max-width: 900px) {
   .overlayName, .overlaycaption .alttitle, .overlaycaption .separator {
     top: 30%;
   }
   .overlaycaption .alttitle i {
     margin-top: 20%;
+  }
+}
+
+@media (max-width: 786px) {
+  .imgoverlay:hover .overlaycaption button,
+  .imgoverlay:focus .overlaycaption button,
+  .imgoverlay:active .overlaycaption button {
+    margin-top: 35%;
+  }
+  .overlayName,
+  .overlaycaption .alttitle,
+  .overlaycaption .separator {
+    top: 40%;
+  }
+}
+
+@media (max-width: 467px) {
+  .masonry-item button {
+    font-size: 10px;
+  }
+  .overlayName,
+  .overlaycaption .alttitle,
+  .overlaycaption .separator {
+    top: 30%;
+  }
+  .imgoverlay:hover .overlaycaption button,
+  .imgoverlay:focus .overlaycaption button,
+  .imgoverlay:active .overlaycaption button {
+    margin-top: 38%;
   }
 }
 
@@ -1609,12 +1650,25 @@ nav [data-bigletter]:before {
     font-size: 12px;
     line-height: 20px;
   }
+  .imgoverlay:hover .overlaycaption button,
+  .imgoverlay:focus .overlaycaption button,
+  .imgoverlay:active .overlaycaption button {
+    margin-top: 33%;
+  }
 }
 
 @media (max-width: 400px) {
   .titleAlignCenter h5 {
     width: 77%;
     margin: 5% auto 8%;
+  }
+  .imgoverlay:hover .overlaycaption .alttitle, .imgoverlay:active .overlaycaption .alttitle, .imgoverlay:focus .overlaycaption .alttitle {
+    padding-top: 8px;
+  }
+  .overlayName,
+  .overlaycaption .alttitle,
+  .overlaycaption .separator {
+    top: 15%;
   }
 }
 
