@@ -84,7 +84,7 @@
     -moz-transition: all 400ms 2s ease-in-out;
     -o-transition: all 400ms 2s ease-in-out;
     -ms-transition: all 400ms 2s ease-in-out;
-	 opacity:0;filter:alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	 opacity:1;filter:alpha(opacity=1);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
 	}
 	.testimonial-slider .owl-controls, .owlcarousel .owl-controls { bottom: -50px;}
 	.portfolio-carousel .owl-controls { bottom: inherit; top: 50%; left: 0px; }
