@@ -1205,12 +1205,32 @@ nav [data-bigletter]:before {
   cursor: url("/assets/rsz_reactLogo.png"), auto;
 }
 
+.bootstrap {
+  cursor: url("/assets/rsz_bootstrap.png"), auto;
+}
+
 .github {
   cursor: url("/assets/rsz_githubLogo.png"), auto;
 }
 
 .firebase {
   cursor: url("/assets/rsz_firebaseLogo.png"), auto;
+}
+
+.hubspot {
+  cursor: url("/assets/rsz_hubspot.png"), auto;
+}
+
+.figma {
+  cursor: url("/assets/rsz_figma.png"), auto;
+}
+
+.nodejs {
+  cursor: url("/assets/rsz_nodejs-logo.png"), auto;
+}
+
+.mongodb {
+  cursor: url("/assets/rsz_mongodb.png"), auto;
 }
 
 .creativity {
